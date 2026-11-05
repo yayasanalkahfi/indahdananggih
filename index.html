@@ -364,7 +364,6 @@
       <p>Merupakan kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu.</p>
       <p style="font:italic 1.5rem var(--serif);color:#ead7b4;margin-top:35px">Anggih & Indah</p>
       <p style="font-size:.68rem;letter-spacing:.18em">29 NOVEMBER 2026</p>
-      <button class="btn light" id="downloadInvitation">Unduh File Undangan HTML ↓</button>
     </section>
   </main>
 
@@ -497,16 +496,6 @@
       const link = document.createElement("a");
       link.href = img.src; link.download = "QRIS-Anggih-Indah.png";
       document.body.appendChild(link); link.click(); link.remove();
-    });
-
-    // Unduh salinan file HTML halaman ini.
-    document.getElementById("downloadInvitation").addEventListener("click", () => {
-      const blob = new Blob(["<!DOCTYPE html>\\n" + document.documentElement.outerHTML], {type:"text/html;charset=utf-8"});
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url; link.download = "Undangan-Anggih-Indah.html";
-      document.body.appendChild(link); link.click(); link.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
     });
   </script>
 </body>
