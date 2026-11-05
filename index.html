@@ -155,6 +155,17 @@ button{font:inherit}
 .gift-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px;text-align:center}
 .gift-card{border:1px solid var(--line);padding:30px 22px;background:rgba(255,255,255,.28);position:relative}
 .gift-card:before{content:"";position:absolute;inset:7px;border:1px solid rgba(173,139,91,.18);pointer-events:none}
+/* LOGO BANK TRANSPARAN */
+.bank-logo {
+  display: block;
+  width: 125px;
+  height: 55px;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0 auto 12px;
+}
 .bank-label{font-size:.65rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
 .bank-name{font:400 1.8rem var(--serif);margin:8px 0}
 .account-number{font:400 clamp(1.25rem,4vw,1.8rem) var(--serif);letter-spacing:.06em;margin:12px 0;overflow-wrap:anywhere}
@@ -384,6 +395,7 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
     <div class="gift-grid">
       <div class="gift-card">
         <div class="bank-label">Transfer Bank</div>
+        <img src="bm.png" alt="Bank Mandiri" class="bank-logo">
         <div class="bank-name" id="bankName1">Mandiri</div>
         <div class="account-number" id="accountNumber1">1320026957770</div>
         <div class="account-owner" id="accountOwner1">a.n. Anggih Saeful Khiyar</div>
@@ -392,6 +404,7 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
 
       <div class="gift-card">
         <div class="bank-label">Transfer Bank</div>
+        <img src="blu.webp" alt="Blu BCA Digital" class="bank-logo">
         <div class="bank-name" id="bankName2">Blu/BCA Digital</div>
         <div class="account-number" id="accountNumber2">009833391527</div>
         <div class="account-owner" id="accountOwner2">a.n. Anggih Saeful Khiyar</div>
@@ -400,6 +413,7 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
 
       <div class="gift-card">
         <div class="bank-label">Transfer e-Wallet</div>
+        <img src="sp.png" alt="Shopeepay" class=bank-logo">
         <div class="bank-name" id="bankName3">ShopeePay</div>
         <div class="account-number" id="accountNumber3">089530385914</div>
         <div class="account-owner" id="accountOwner3">a.n. Indah Ratna Purwitasari</div>
