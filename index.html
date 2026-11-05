@@ -281,4 +281,229 @@
     <section class="section gallery">
       <div class="wrap">
         <div class="section-heading reveal">
-          <div class="eyebrow">Frames of our story</div
+          <div class="eyebrow">Frames of our story</div><h2>Our Moments</h2><div class="ornament">✦</div>
+          <p>Beberapa potongan kenangan yang ingin kami simpan selamanya.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal"><img src="1.png" alt="Foto kenangan 1" onerror="this.style.display='none'"><div class="ph">Foto galeri 1<br>gallery-1.jpg</div></div>
+          <div class="gallery-item reveal"><img src="4.png" alt="Foto kenangan 2" onerror="this.style.display='none'"><div class="ph">Foto galeri 2<br>gallery-2.jpg</div></div>
+          <div class="gallery-item reveal"><img src="5.png" alt="Foto kenangan 3" onerror="this.style.display='none'"><div class="ph">Foto galeri 3<br>gallery-3.jpg</div></div>
+          <div class="gallery-item reveal"><img src="6.png" alt="Foto kenangan 4" onerror="this.style.display='none'"><div class="ph">Foto galeri 4<br>gallery-4.jpg</div></div>
+          <div class="gallery-item reveal"><img src="7.png" alt="Foto kenangan 5" onerror="this.style.display='none'"><div class="ph">Foto galeri 5<br>gallery-5.jpg</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rsvp">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Kindly respond</div><h2>Will You Join Us?</h2><div class="ornament">❦</div>
+          <p>Kehadiran dan doa restu Anda merupakan kebahagiaan bagi kami.</p>
+        </div>
+        <form class="rsvp-box reveal" id="rsvpForm">
+          <div class="field"><label for="name">Nama lengkap</label><input id="name" name="name" required placeholder="Nama Anda"></div>
+          <div class="field"><label for="attendance">Konfirmasi kehadiran</label><select id="attendance" name="attendance" required><option value="">Pilih konfirmasi</option><option>Hadir</option><option>Maaf, belum dapat hadir</option></select></div>
+          <div class="field"><label for="guests">Jumlah tamu</label><select id="guests" name="guests"><option>1 orang</option><option>2 orang</option><option>3 orang</option><option>4 orang</option></select></div>
+          <div class="field"><label for="message">Ucapan dan doa</label><textarea id="message" name="message" placeholder="Tuliskan doa terbaik Anda..."></textarea></div>
+          <button class="btn filled" type="submit">Kirim Konfirmasi ↗</button>
+          <p class="rsvp-note">Konfirmasi akan dikirim melalui WhatsApp. Isi nomor WhatsApp tujuan pada konfigurasi JavaScript.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section gift" id="gift">
+      <div class="wrap reveal">
+        <div class="eyebrow">A little kindness</div>
+        <h2 class="serif" style="font-size:clamp(2.8rem,7vw,4.5rem);font-weight:400;line-height:1;margin:12px 0">Wedding Gift</h2>
+        <div class="ornament">✦</div>
+        <p class="gift-intro">Doa restu Anda merupakan hadiah terindah bagi kami. Namun, apabila ingin berbagi tanda kasih, dapat melalui informasi berikut.</p>
+
+        <!-- GANTI DATA REKENING 1 DAN 2 DI BAWAH -->
+        <div class="gift-grid">
+          <div class="gift-card">
+            <div class="bank-label">Transfer Bank</div>
+            <div class="bank-name" id="bankName1">Mandiri</div>
+            <div class="account-number" id="accountNumber1">1320026957770</div>
+            <div class="account-owner" id="accountOwner1">a.n. Anggih Saeful Khiyar</div>
+            <button class="btn copy-account" data-account="accountNumber1">Salin Nomor ↗</button>
+          </div>
+          <div class="gift-card">
+            <div class="bank-label">Transfer e-Wallet</div>
+            <div class="bank-name" id="bankName2">Shopeepay</div>
+            <div class="account-number" id="accountNumber2">089530385914</div>
+            <div class="account-owner" id="accountOwner2">a.n. Indah Ratna Purwitasari</div>
+            <button class="btn copy-account" data-account="accountNumber2">Salin Nomor ↗</button>
+          </div>
+        </div>
+
+        <!-- GANTI assets/qris.png DENGAN GAMBAR QRIS ASLI -->
+        <div class="qris-card">
+          <div class="bank-label">Scan to send a gift</div>
+          <h3 class="serif" style="font-size:2rem;font-weight:400;margin:5px 0">QRIS</h3>
+          <p style="font-size:.8rem;color:var(--muted);margin:0">Pindai kode QR berikut menggunakan aplikasi pembayaran Anda.</p>
+          <div class="qris-frame">
+            <img id="qrisImage" src="8.jpg" alt="QRIS Anggih dan Indah" onerror="this.style.display='none'">
+            <div class="qris-placeholder" id="qrisPlaceholder">Tempat gambar QRIS<br>assets/qris.png</div>
+          </div>
+          <div class="download-row">
+            <button class="btn filled" id="downloadQris">Unduh QRIS ↓</button>
+          </div>
+          <p class="rsvp-note">Pastikan gambar QRIS yang diunggah adalah kode asli dan sudah diuji sebelum undangan dibagikan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="eyebrow">The beginning of forever</div>
+      <h2>Forever<br><i>Starts Here</i></h2>
+      <div class="ornament">❦</div>
+      <p>Merupakan kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu.</p>
+      <p style="font:italic 1.5rem var(--serif);color:#ead7b4;margin-top:35px">Anggih & Indah</p>
+      <p style="font-size:.68rem;letter-spacing:.18em">29 NOVEMBER 2026</p>
+      <button class="btn light" id="downloadInvitation">Unduh File Undangan HTML ↓</button>
+    </section>
+  </main>
+
+  <footer>MADE WITH LOVE · ANGGIH & INDAH · 2026</footer>
+
+  <button class="music-btn" id="musicButton" aria-label="Putar atau jeda musik"><span>♫</span></button>
+  <audio id="bgMusic" loop preload="none"><source src="9.mp3" type="audio/mpeg"></audio>
+  <div class="lightbox" id="lightbox"><button aria-label="Tutup" id="closeLightbox">×</button><img id="lightboxImage" src="" alt="Foto diperbesar"></div>
+
+  <script>
+    /* ======================= KONFIGURASI =======================
+       Ubah nilai di bawah sebelum undangan dibagikan.
+       Nomor WhatsApp: gunakan kode negara, tanpa + atau spasi.
+       Contoh format: 6281234567890
+    =========================================================== */
+    const CONFIG = {
+      weddingDate: "2026-11-29T16:00:00+07:00",
+      whatsappNumber: "6285162971097"
+    };
+
+    // Nama tamu: tambahkan ?to=Nama%20Tamu pada akhir URL.
+    const guestParam = new URLSearchParams(location.search).get("to");
+    if (guestParam) document.getElementById("guestName").textContent = guestParam.replace(/[<>]/g, "");
+
+    // Buka undangan dan mulai musik setelah interaksi pengguna.
+    const cover = document.getElementById("cover");
+    const music = document.getElementById("bgMusic");
+    const musicButton = document.getElementById("musicButton");
+    document.getElementById("openInvitation").addEventListener("click", () => {
+      cover.classList.add("opened");
+      document.body.classList.remove("locked");
+      musicButton.classList.add("visible");
+      music.play().then(() => musicButton.classList.add("playing")).catch(() => {});
+    });
+
+    // Countdown menuju akad.
+    function updateCountdown(){
+      const diff = new Date(CONFIG.weddingDate).getTime() - Date.now();
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = '<div class="eyebrow">Today is the day — Selamat menempuh hidup baru!</div>';
+        return;
+      }
+      document.getElementById("days").textContent = String(Math.floor(diff/86400000)).padStart(3,"0");
+      document.getElementById("hours").textContent = String(Math.floor(diff%86400000/3600000)).padStart(2,"0");
+      document.getElementById("minutes").textContent = String(Math.floor(diff%3600000/60000)).padStart(2,"0");
+      document.getElementById("seconds").textContent = String(Math.floor(diff%60000/1000)).padStart(2,"0");
+    }
+    updateCountdown(); setInterval(updateCountdown,1000);
+
+    // Animasi elemen ketika masuk viewport.
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+        });
+      }, {threshold:.12});
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+    }
+
+    // Kontrol musik.
+    musicButton.addEventListener("click", async () => {
+      if (music.paused) {
+        try { await music.play(); musicButton.classList.add("playing"); }
+        catch (e) { alert("File musik belum tersedia. Tambahkan assets/background-music.mp3."); }
+      } else {
+        music.pause(); musicButton.classList.remove("playing");
+      }
+    });
+
+    // Galeri lightbox.
+    const lightbox = document.getElementById("lightbox");
+    document.querySelectorAll(".gallery-item").forEach(item => {
+      item.addEventListener("click", () => {
+        const img = item.querySelector("img");
+        if (img && img.complete && img.naturalWidth) {
+          document.getElementById("lightboxImage").src = img.src;
+          lightbox.classList.add("show");
+        }
+      });
+    });
+    document.getElementById("closeLightbox").addEventListener("click", () => lightbox.classList.remove("show"));
+    lightbox.addEventListener("click", e => { if (e.target === lightbox) lightbox.classList.remove("show"); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") lightbox.classList.remove("show"); });
+
+    // RSVP melalui WhatsApp.
+    document.getElementById("rsvpForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      if (CONFIG.whatsappNumber.includes("X")) {
+        alert("Isi nomor WhatsApp tujuan pada CONFIG.whatsappNumber terlebih dahulu.");
+        return;
+      }
+      const message = [
+        "Assalamu'alaikum, saya ingin mengonfirmasi undangan pernikahan Anggih & Indah.",
+        "Nama: " + data.get("name"),
+        "Kehadiran: " + data.get("attendance"),
+        "Jumlah tamu: " + data.get("guests"),
+        "Ucapan: " + (data.get("message") || "-")
+      ].join("\\n");
+      window.open("https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent(message), "_blank", "noopener");
+    });
+
+    // Salin nomor rekening masing-masing.
+    document.querySelectorAll(".copy-account").forEach(button => {
+      button.addEventListener("click", async () => {
+        const value = document.getElementById(button.dataset.account).textContent.trim();
+        if (value.includes("[") || value.includes("]")) {
+          alert("Isi nomor rekening terlebih dahulu.");
+          return;
+        }
+        try {
+          await navigator.clipboard.writeText(value);
+          const old = button.textContent; button.textContent = "Tersalin ✓";
+          setTimeout(() => button.textContent = old, 1800);
+        } catch (e) {
+          alert("Gagal menyalin otomatis. Silakan salin nomor rekening secara manual: " + value);
+        }
+      });
+    });
+
+    // Unduh gambar QRIS. Memerlukan assets/qris.png.
+    document.getElementById("downloadQris").addEventListener("click", () => {
+      const img = document.getElementById("qrisImage");
+      if (!img.complete || !img.naturalWidth) {
+        alert("Gambar QRIS belum tersedia. Simpan QRIS asli sebagai assets/qris.png.");
+        return;
+      }
+      const link = document.createElement("a");
+      link.href = img.src; link.download = "QRIS-Anggih-Indah.png";
+      document.body.appendChild(link); link.click(); link.remove();
+    });
+
+    // Unduh salinan file HTML halaman ini.
+    document.getElementById("downloadInvitation").addEventListener("click", () => {
+      const blob = new Blob(["<!DOCTYPE html>\\n" + document.documentElement.outerHTML], {type:"text/html;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url; link.download = "Undangan-Anggih-Indah.html";
+      document.body.appendChild(link); link.click(); link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+  </script>
+</body>
+</html>
