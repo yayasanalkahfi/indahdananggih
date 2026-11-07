@@ -145,6 +145,21 @@ button{font:inherit}
 .guest-entry h4{font:400 1.5rem var(--serif);margin:0}
 .guest-entry p{font-size:.85rem;color:var(--muted);margin:8px 0;overflow-wrap:anywhere;white-space:pre-wrap}
 .guest-entry small{font-size:.65rem;color:var(--gold);letter-spacing:.08em}
+
+/* SCROLL BUKU TAMU TANPA KOTAK */
+#guestbookList {
+  max-height: min(650px, 65vh);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+#guestbookList::-webkit-scrollbar {
+  display: none;
+}
+
 .status-message{font-size:.8rem;margin-top:12px;color:var(--muted)}
 .status-message.error{color:#a33}
 .guestbook-box{max-width:620px;margin:30px auto 0;background:var(--paper);padding:clamp(25px,6vw,45px);box-shadow:0 20px 60px rgba(49,37,27,.08)}
