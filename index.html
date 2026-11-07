@@ -222,6 +222,68 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+  /* KETERANGAN DAN JUMLAH UCAPAN */
+.guestbook-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.guestbook-caption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.guestbook-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 9px 15px;
+  border-radius: 50px;
+  background: rgba(190, 145, 82, 0.16);
+  color: #a87936;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.guestbook-count svg {
+  width: 21px;
+  height: 21px;
+}
+
+#guestbookCount {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tampilan layar HP */
+@media (max-width: 480px) {
+  .guestbook-heading-row {
+    gap: 8px;
+  }
+
+  .guestbook-caption {
+    font-size: 0.85rem;
+  }
+
+  .guestbook-count {
+    gap: 5px;
+    padding: 8px 11px;
+    font-size: 0.8rem;
+  }
+
+  .guestbook-count svg {
+    width: 18px;
+    height: 18px;
+  }
+}
 </style>
 </head>
 
@@ -399,7 +461,25 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
         <div><strong id="totalGuests">0</strong><span>Total Tamu</span></div>
         <div><strong id="totalAbsent">0</strong><span>Berhalangan</span></div>
       </div>
-      <div id="guestbookStatus" class="rsvp-note">Memuat ucapan dan doa...</div>
+      <div class="guestbook-heading-row">
+  <p id="guestbookStatus" class="guestbook-caption">
+    Ucapan dan doa dari keluarga dan sahabat.
+  </p>
+
+  <div class="guestbook-count" aria-label="Jumlah ucapan">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M22 2 11 13"
+        fill="none" stroke="currentColor"
+        stroke-width="1.7" stroke-linecap="round"/>
+      <path d="m22 2-7 20-4-9-9-4 20-7Z"
+        fill="none" stroke="currentColor"
+        stroke-width="1.7" stroke-linejoin="round"/>
+    </svg>
+
+    <span id="guestbookCount">0</span>
+    <span>Ucapan</span>
+  </div>
+</div>
       <div id="guestbookList"></div>
     </div>
   </div>
@@ -710,15 +790,18 @@ rsvpForm.addEventListener("submit", async event => {
    BUKU TAMU DAN STATISTIK REAL-TIME
 ========================================================= */
 const guestbookList = document.getElementById("guestbookList");
+const guestbookCount = document.getElementById("guestbookCount");
 const guestbookStatus = document.getElementById("guestbookStatus");
 
 const guestbookQuery = query(
   rsvpCollection,
-  orderBy("createdAt", "desc"),
-  limit(200)
+  orderBy("createdAt", "desc")
 );
 
 onSnapshot(guestbookQuery, snapshot => {
+
+  // Menghitung seluruh ucapan yang tersimpan
+  guestbookCount.textContent = snapshot.size;
   const entries = snapshot.docs.map(doc => doc.data());
 
   const totalRsvp = entries.length;
