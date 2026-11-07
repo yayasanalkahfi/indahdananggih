@@ -510,18 +510,50 @@ if (guestParam) {
     guestParam.replace(/[<>]/g, "").slice(0, 100);
 }
 
+
 /* COVER DAN MUSIK */
 const cover = document.getElementById("cover");
 const music = document.getElementById("bgMusic");
 const musicButton = document.getElementById("musicButton");
 
+/* FADE-IN MUSIK HANYA SEKALI SAAT MEMBUKA UNDANGAN */
+let initialFadeDone = false;
+
+async function playMusicWithFadeIn() {
+  try {
+    await music.play();
+    musicButton.classList.add("playing");
+
+    if (initialFadeDone) return;
+
+    initialFadeDone = true;
+    music.volume = 0;
+
+    const duration = 5000;
+    const startTime = performance.now();
+
+    function fadeIn(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      music.volume = progress;
+
+      if (progress < 1) {
+        requestAnimationFrame(fadeIn);
+      }
+    }
+
+    requestAnimationFrame(fadeIn);
+
+  } catch (error) {
+    console.log("Musik gagal diputar:", error);
+  }
+}
+
 document.getElementById("openInvitation").addEventListener("click", () => {
   cover.classList.add("opened");
   document.body.classList.remove("locked");
   musicButton.classList.add("visible");
-  music.play()
-    .then(() => musicButton.classList.add("playing"))
-    .catch(() => {});
+
+  playMusicWithFadeIn();
 });
 
 /* COUNTDOWN */
