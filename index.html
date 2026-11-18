@@ -302,6 +302,79 @@ button{font:inherit}
 .closing{background:#342c27;color:var(--paper);text-align:center;padding:110px 20px}
 .closing h2{font:400 clamp(3.5rem,10vw,6.5rem)/.85 var(--serif);margin:22px 0;color:#ead7b4}
 .closing p{color:#c8bcae;max-width:570px;margin:15px auto;font-size:.86rem}
+  
+/* KELUARGA BESAR MEMPELAI */
+.family-section {
+  max-width: 750px;
+  margin: 55px auto 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(215,189,145,.3);
+}
+
+.family-heading {
+  font: italic 1.5rem var(--serif);
+  color: var(--gold2);
+  margin-bottom: 28px;
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.family-column {
+  padding: 20px 12px;
+  border: 1px solid rgba(215,189,145,.22);
+  position: relative;
+}
+
+.family-column:before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(215,189,145,.12);
+  pointer-events: none;
+}
+
+.family-column h3 {
+  font: 400 1.45rem/1.1 var(--serif);
+  color: var(--gold2);
+  margin: 5px 0 17px;
+}
+
+.family-column p {
+  font-size: .78rem;
+  line-height: 1.8;
+  color: #d5c8b8;
+  margin: 7px auto;
+}
+
+.family-divider {
+  width: 35px;
+  height: 1px;
+  background: var(--gold);
+  margin: 15px auto;
+}
+
+@media(max-width:650px) {
+  .family-grid {
+    gap: 12px;
+  }
+
+  .family-column {
+    padding: 17px 9px;
+  }
+
+  .family-column h3 {
+    font-size: 1.15rem;
+  }
+
+  .family-column p {
+    font-size: .68rem;
+    line-height: 1.7;
+  }
+}
 footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size:.62rem;letter-spacing:.12em}
 .music-btn{position:fixed;right:18px;bottom:18px;z-index:50;width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;background:rgba(245,240,232,.94);color:var(--ink);display:none;place-items:center;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.12)}
 .music-btn.visible{display:grid}
@@ -730,6 +803,50 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
       29 NOVEMBER 2026
     </p>
 
+  <!-- KELUARGA BESAR MEMPELAI -->
+  <div class="family-section">
+
+    <div class="family-heading">
+      Turut Mengundang
+    </div>
+
+    <div class="family-grid">
+
+      <!-- KELUARGA MEMPELAI PRIA -->
+      <div class="family-column">
+
+        <h3>Keluarga Besar<br>Mempelai Pria</h3>
+
+        <div class="family-divider"></div>
+
+        <p>
+          Bapak Endang (alm)
+          <br>
+          & Ibu Anah (almh)
+        </p>
+
+        <p>
+          Beserta keluarga besar
+        </p>
+
+      </div>
+
+      <!-- KELUARGA MEMPELAI WANITA -->
+      <div class="family-column">
+
+        <h3>Keluarga Besar<br>Mempelai Wanita</h3>
+        <div class="family-divider"></div>
+        <p>
+          Bapak Ramli Guci
+          <br>
+          & Ibu Ida Purwanti
+        </p>
+        <p>
+          Beserta keluarga besar
+        </p>
+      </div>
+      </div>
+    </div>
   </div>
 </section>
 </main>
