@@ -415,6 +415,25 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
   opacity: 0.2;
 }
 
+/* GRADASI FOTO CLOSING DARI ATAS KE BAWAH */
+.closing-slideshow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(52, 44, 39, 0.20) 0%,
+    rgba(52, 44, 39, 0.40) 30%,
+    rgba(52, 44, 39, 0.70) 60%,
+    rgba(52, 44, 39, 0.90) 80%,
+    #342c27 100%
+  );
+}
+
+
 .closing-content {
   position: relative;
   z-index: 1;
