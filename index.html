@@ -535,6 +535,93 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
   pointer-events: none;
   transition: width 0.08s linear;
 }
+  
+/* =================================
+   COMPACT SPACING — CLOSING SECTION
+================================= */
+
+/* Mempersempit ruang atas dan bawah closing */
+.closing {
+  padding: 75px 20px 55px;
+}
+
+/* Jarak judul */
+.closing h2 {
+  margin: 16px 0;
+}
+
+/* Jarak paragraf */
+.closing p {
+  margin: 9px auto;
+  line-height: 1.5;
+}
+
+/* Area keluarga */
+.family-section {
+  margin: 30px auto 0;
+  padding-top: 18px;
+}
+
+/* Judul Turut Mengundang */
+.family-heading {
+  margin-bottom: 16px;
+}
+
+/* Jarak antarkolom keluarga */
+.family-grid {
+  gap: 16px;
+}
+
+/* Ruang di dalam kotak keluarga */
+.family-column {
+  padding: 14px 9px;
+}
+
+/* Judul keluarga */
+.family-column h3 {
+  margin: 2px 0 10px;
+  line-height: 1.15;
+}
+
+/* Garis ornamen */
+.family-divider {
+  margin: 10px auto;
+}
+
+/* Teks nama orang tua dan keluarga */
+.family-column p {
+  margin: 4px auto;
+  line-height: 1.5;
+}
+
+/* Tampilan HP */
+@media (max-width: 650px) {
+  .closing {
+    padding: 65px 16px 45px;
+  }
+
+  .family-section {
+    margin-top: 25px;
+    padding-top: 15px;
+  }
+
+  .family-grid {
+    gap: 12px;
+  }
+
+  .family-column {
+    padding: 12px 7px;
+  }
+
+  .family-column h3 {
+    font-size: 1.08rem;
+  }
+
+  .family-column p {
+    font-size: .66rem;
+    line-height: 1.45;
+  }
+}
 </style>
 </head>
 
@@ -814,7 +901,7 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
       apabila Anda berkenan hadir serta memberikan doa restu.
     </p>
 
-    <p style="font:italic 1.5rem var(--serif);color:#ead7b4;margin-top:35px">
+    <p style="font:italic 1.5rem var(--serif);color:#ead7b4;margin-top:20px">
       Anggih & Indah
     </p>
 
@@ -833,26 +920,20 @@ footer{background:#28221e;color:#a99d90;text-align:center;padding:20px;font-size
 
       <!-- KELUARGA MEMPELAI PRIA -->
       <div class="family-column">
-
         <h3>Keluarga Besar<br>Mempelai Pria</h3>
-
         <div class="family-divider"></div>
-
         <p>
           Bapak Endang (alm)
           <br>
           & Ibu Anah (almh)
         </p>
-
         <p>
           Beserta keluarga besar
         </p>
-
       </div>
 
       <!-- KELUARGA MEMPELAI WANITA -->
       <div class="family-column">
-
         <h3>Keluarga Besar<br>Mempelai Wanita</h3>
         <div class="family-divider"></div>
         <p>
